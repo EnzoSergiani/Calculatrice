@@ -1,0 +1,116 @@
+:root{
+    --firstColor : #343a40;
+    --secondaryColor : #6c757d;
+    --thirdColor : #495057;
+    --equalColor : #faa307;
+}
+
+body{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: auto;
+    height:100%;
+}
+
+img{
+    height: 15px;
+    width: 15px;
+}
+
+#calculator{
+    overflow: hidden;
+    text-align: center;
+    border: solid 2px black;
+    border-radius: 30px;
+    width: 650px;
+    height: 850px;
+    background-color: white;
+}
+
+#title{
+    height: 5%;
+    align-items:center;
+    background-color: var(--firstColor);
+    color: white;
+    font-size: 30px;
+    font-family: "JetBrains Mono";
+}
+
+#output{
+    height: 25%;
+    background-color: var(--secondaryColor);
+}
+
+#display{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;    
+}
+
+#historic{
+    text-align: right;
+    font-family: 'LiquidCrystal';
+    font-size: 30px;
+    color: dark;
+    height: 50%;
+}
+
+#answer{
+    text-align: right;
+    font-size: 30px;
+    color: dark;
+    height: 50%;
+}
+
+
+#input{
+    text-align: center;
+    justify-content: center;
+    padding: 5%;
+    height: 70%;
+    background-color: var(--firstColor);
+    display: grid;
+    align-items:center;
+    text-align: center;
+    grid-template-columns: 100px 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px 100px;
+    gap: 5px;
+}
+
+.button{
+    margin:auto;
+    display:block;
+    border: solid 1px --firstColor;
+    border-radius: 5px;
+    background-color: var(--thirdColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 80px;
+    height: 80px
+}
+
+.number{
+    margin:auto;
+    display:block;
+    border: solid 1px --firstColor;
+    border-radius: 5px;
+    background-color: var(--secondaryColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 80px;
+    height:80px;
+}
+
+#equal{
+    background-color: var(--equalColor);
+    grid-row: 4/6;
+    grid-column: 5/5;
+    height:188px;
+}
