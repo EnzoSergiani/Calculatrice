@@ -108,7 +108,7 @@ img{
     height:80px;
 }
 
-#equal{
+#egal{
     background-color: var(--equalColor);
     grid-row: 4/6;
     grid-column: 5/5;
