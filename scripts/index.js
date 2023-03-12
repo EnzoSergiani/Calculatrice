@@ -1,9 +1,13 @@
-// TODO : Enlever le "undefined"
+// ! : Problème dans la réception des id
+// ! : Rendre fonctionnel la touche "sqrt()"
+// TODO : Remplacer "*" pas "x" dans l'affichage
+// TODO : Remplacer "**" pas "^" dans l'affichage
 
 //#region --- Outils ---
+
 function dechargePile(values) {
+  values = values || "";
   for (let i = 0; i < pile.length; i++) {
-    console.log("> ",pile[i]);
     values += pile[i];
   }
   return values;
@@ -12,6 +16,7 @@ function dechargePile(values) {
 //#endregion
 
 //#region --- Opérations ---
+
 function calcul(pile){
   try {
     answer = eval(pile.join(""));
@@ -23,9 +28,11 @@ function calcul(pile){
     return;
   }
 }
+
 //#endregion
 
 //#region --- Affichage ---
+
 function printResult(values) {
   document.getElementById("answer").innerHTML = values;
 }
@@ -65,13 +72,14 @@ buttons.forEach((button) => {
       clearHistoric();
       pile = [];
     }
-    else if (id == "delete"){
+    else if (id == "delete"){    console.log("1> ",pile.join(""));
+    console.log("2> ",eval(pile.join("")));
       pile.pop();
       printResult(dechargePile());
     }
     else if (id == "egal") {
       printHistoric(dechargePile())
-      clearResult();
+      clearResult();      
       answer = calcul(pile)
       pile = [answer.toString()]
       printResult(answer);
@@ -97,7 +105,7 @@ buttons.forEach((button) => {
       printResult(dechargePile());
     }
     else if (id == "puissance") {
-      pile.push("^");
+      pile.push("**");
       printResult(dechargePile());
     }
     else if (id == "pi") {
@@ -113,7 +121,7 @@ buttons.forEach((button) => {
       printResult(dechargePile());
     }
     else if (id == "racine") {
-      pile.push(" sqrt(");
+      pile.push("sqrt(");
       printResult(dechargePile());
     }
     else if (id == "point") {
