@@ -1,7 +1,7 @@
 // ! : Problème dans la réception des id
 // ! : Rendre fonctionnel la touche "sqrt()"
-// TODO : Remplacer "*" pas "x" dans l'affichage
-// TODO : Remplacer "**" pas "^" dans l'affichage
+// TODO : Remplacer "*" par "x" dans l'affichage
+// TODO : Remplacer "**" par "^" dans l'affichage
 
 //#region --- Outils ---
 
